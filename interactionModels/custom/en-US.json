@@ -1,0 +1,607 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "tunes for you",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what are the answer choices",
+                        "what are the artist options",
+                        "what are the options",
+                        "what are the choices",
+                        "What are the choices again"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "exit"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CaptureArtistIntent",
+                    "slots": [
+                        {
+                            "name": "artist",
+                            "type": "Musician",
+                            "samples": [
+                                "I pick {artist}",
+                                "{artist}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "yes i want a tune for {artist}",
+                        "yes i want one for {artist}",
+                        "yes i choose {artist}",
+                        "i want to restart the quiz for {artist}",
+                        "retake quiz for {artist}",
+                        "retake for {artist}",
+                        "start another quiz for {artist}",
+                        "retake quiz with {artist}",
+                        "retake with {artist}",
+                        "I want to retake the quiz with {artist}",
+                        "I want to restart with {artist}",
+                        "I pick {artist}",
+                        "I like {artist}",
+                        "{artist}",
+                        "My favorite artist is {artist}"
+                    ]
+                },
+                {
+                    "name": "QuizAnswerIntent",
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "QuizAnswer",
+                            "samples": [
+                                "I choose {answer}",
+                                "I said {answer}",
+                                "{answer}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "I like {answer} more",
+                        "i'm at an {answer}",
+                        "I have {answer} sibling",
+                        "i don't have {answer} siblings",
+                        "i have {answer} siblings",
+                        "I think {answer} is more important",
+                        "{answer} are more important",
+                        "{answer} is more important",
+                        "I think I'll go with {answer}",
+                        "my spirit animal is {answer}",
+                        "my spirit animal is a {answer}",
+                        "definitely {answer}",
+                        "I prefer {answer}",
+                        "I would want a {answer}",
+                        "I would rather {answer}",
+                        "{answer}",
+                        "I choose {answer}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": [
+                        "i want to retake the quiz",
+                        "can you give me another tune",
+                        "i'd like another tune",
+                        "i'd like a new tune",
+                        "start over",
+                        "I'd like to take another quiz",
+                        "can you give me another quiz",
+                        "i want to take another quiz",
+                        "restart quiz"
+                    ]
+                },
+                {
+                    "name": "YesIntent",
+                    "slots": [],
+                    "samples": [
+                        "pineapple belongs on pizza",
+                        "yup",
+                        "yes i want to take another quiz",
+                        "yes i would",
+                        "yes i do",
+                        "yes pineapple belongs on pizza",
+                        "sure",
+                        "okay",
+                        "yep",
+                        "yes"
+                    ]
+                },
+                {
+                    "name": "NoIntent",
+                    "slots": [],
+                    "samples": [
+                        "pineapple doesn't belong on pizza",
+                        "no i don't want to take another quiz",
+                        "no i don't",
+                        "no pineapple doesn't belong on pizza",
+                        "no thank you",
+                        "nah",
+                        "no thanks",
+                        "nope",
+                        "no"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "QuizAnswer",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "restaurant"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dogs"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cats"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "none",
+                                "synonyms": [
+                                    "any"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "under"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "over"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "save the money",
+                                "synonyms": [
+                                    "save"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spend it all",
+                                "synonyms": [
+                                    "spend"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "extra toe",
+                                "synonyms": [
+                                    "toe"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "extra finger",
+                                "synonyms": [
+                                    "finger"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fast food",
+                                "synonyms": [
+                                    "fast food joint"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "expensive",
+                                "synonyms": [
+                                    "expensive restaurant"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "seven"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "six"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "five"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "four"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "three"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "two"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "zero",
+                                "synonyms": [
+                                    "none",
+                                    "zerowe"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "personality"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "looks",
+                                "synonyms": [
+                                    "lux"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "soccer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "football"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "basketball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tiktok",
+                                "synonyms": [
+                                    "tic toc"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vine",
+                                "synonyms": [
+                                    "fine"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go out",
+                                "synonyms": [
+                                    "party",
+                                    "go out and party"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stay at home",
+                                "synonyms": [
+                                    "stay inside",
+                                    "home",
+                                    "stay home"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fish",
+                                "synonyms": [
+                                    "phish"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cat",
+                                "synonyms": [
+                                    "cats"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dog",
+                                "synonyms": [
+                                    "dogs"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Musician",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "beyonce"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nicki minaj"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "taylor swift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "justin bieber"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jay-z"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pharrell williams"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kanye west"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kendrick lamar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ben rector"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "imagine dragons"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chance the rapper",
+                                "synonyms": [
+                                    "chance"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "alec benjamin"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CaptureArtistIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "artist",
+                            "type": "Musician",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.763398530945.427573059527"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.553839043565.36846797235.567927319603",
+                                    "values": [
+                                        "ben rector",
+                                        "alec benjamin",
+                                        "chance",
+                                        "chance the rapper",
+                                        "imagine dragons"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "QuizAnswerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "QuizAnswer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.814115771874.1241708576128"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.810655457114.223129591069.414350123910"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "YesIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.763398530945.427573059527",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Your options are Ben Rector, Chance the Rapper, Imagine Dragons, or Alec Benjamin. Which will you pick?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.972153284905.1453903283732.843862803215",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I don't know that artist. Your options are Ben Rector, Chance the Rapper, Imagine Dragons, or Alec Benjamin. Which will you pick?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.814115771874.1241708576128",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I didn't quite get that, could you repeat your answer?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Could you say your answer again?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry. Can you repeat your answer?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1490859737354.1564229228025.1242200209955",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I don't think that's a valid choice. Could you pick something else?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, can you choose another answer?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, that's not one of the choices. Can you pick a different answer?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.873806124210.1319460998739",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to choose another artist?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to get another tune?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Would you like to get another tune?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.873806124210.1319460998739.1116415843934",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Would you like to get another tune?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.810655457114.223129591069.414350123910",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, that's not one of the choices. You can say help to list the options."
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.553839043565.36846797235.567927319603",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I don't know that artist. You can reply help to hear all available artists."
+                    }
+                ]
+            }
+        ]
+    }
+}
